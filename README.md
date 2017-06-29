@@ -11,7 +11,7 @@ https://arxiv.org/abs/1706.06083.
 
 As part of the challenge, we release both the training code and the network architecture, but keep the network weights secret.
 We invite any researcher to submit attacks against our model (see the detailed instructions below).
-We will maintain a leaderboard of the best attacks for the next three months and then publish our secret network weights.
+We will maintain a leaderboard of the best attacks for the next two months and then publish our secret network weights.
 
 The goal of our challenge is to clarify the state-of-the-art for adversarial robustness on MNIST. Moreover, we hope that future work on defense mechanisms will adopt a similar challenge format in order to improve reproducibility and empirical comparisons.
 
@@ -47,7 +47,7 @@ The `sha256()` digest of our model file is:
 ```
 14eea09c72092db5c2eb5e34cd105974f42569281d2f34826316e356d057f96d
 ```
-We will release the corresponding model file on October 1st 2017, which is roughly three months after the start of this competition.
+We will release the corresponding model file on September 1st 2017, which is roughly two months after the start of this competition.
 
 ### The Attack Model
 
