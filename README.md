@@ -20,10 +20,11 @@ The goal of our challenge is to clarify the state-of-the-art for adversarial rob
 
 | Attack                                 | Submitted by  | Accuracy | Submission Date |
 | -------------------------------------- | ------------- | -------- | ---- |
-| FGSM on [CW](https://github.com/carlini/nn_robust_attacks) loss for the <br> naturally trained public network      | initial       | 96.08%   | Jun 28, 2017    |
-| PGD on cross-entropy loss for the<br> naturally trained public network      | initial       | 96.81%   | Jun 28, 2017    |
-| FGSM on cross-entropy loss for the<br> adversarially trained public network      | initial       | 97.66%   | Jun 28, 2017    |
-| PGD on cross-entropy loss for the<br> adversarially trained public network      | initial       | 97.79%   | Jun 28, 2017    |
+| FGSM on the [CW](https://github.com/carlini/nn_robust_attacks) loss for model B from <br> ["Ensemble Adversarial Training [...]"](https://arxiv.org/abs/1705.07204)     | [Florian Tramèr](http://floriantramer.com/)       | **94.36%**   | Jun 29, 2017    |
+| FGSM on the [CW](https://github.com/carlini/nn_robust_attacks) loss for the <br> naturally trained public network      | (initial entry)       | 96.08%   | Jun 28, 2017    |
+| PGD on the cross-entropy loss for the<br> naturally trained public network      | (initial entry)       | 96.81%   | Jun 28, 2017    |
+| FGSM on the cross-entropy loss for the<br> adversarially trained public network      | (initial entry)       | 97.66%   | Jun 28, 2017    |
+| PGD on the cross-entropy loss for the<br> adversarially trained public network      | (initial entry)       | 97.79%   | Jun 28, 2017    |
 
 
 ## Format and Rules
