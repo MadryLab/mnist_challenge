@@ -1,0 +1,11 @@
+# data files
+MNIST_DATA
+
+# attack files
+*.npy
+
+# model files
+models
+
+# compiled python files
+*.pyc
