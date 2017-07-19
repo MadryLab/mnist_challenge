@@ -13,9 +13,9 @@ if len(sys.argv) == 1 or sys.argv[1] not in ['natural', 'adv_trained']:
   sys.exit(1)
 
 if sys.argv[1] == 'natural':
-  url = 'https://github.com/MadryProj/mnist_challenge_models/raw/master/natural.zip'
+  url = 'https://github.com/MadryLab/mnist_challenge_models/raw/master/natural.zip'
 else: # fetch adv_trained model
-  url = 'https://github.com/MadryProj/mnist_challenge_models/raw/master/adv_trained.zip'
+  url = 'https://github.com/MadryLab/mnist_challenge_models/raw/master/adv_trained.zip'
 
 fname = url.split('/')[-1]  # get the name of the file
 

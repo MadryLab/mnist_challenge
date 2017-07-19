@@ -4,7 +4,7 @@ Recently, there has been much progress on adversarial *attacks* against neural n
 We now complement these advances by proposing an *attack challenge* for the
 [MNIST](http://yann.lecun.com/exdb/mnist/) dataset (we recently released [a
 CIFAR10 variant of this
-challenge](https://github.com/MadryProj/cifar10_challenge)).
+challenge](https://github.com/MadryLab/cifar10_challenge)).
 We have trained a robust network, and the objective is to find a set of adversarial examples on which this network achieves only a low accuracy.
 To train an adversarially-robust network, we followed the approach from our recent paper:
 
