@@ -83,7 +83,9 @@ if __name__ == '__main__':
     print('No checkpoint found')
   elif x_adv.shape != (10000, 784):
     print('Invalid shape: expected (10000,784), found {}'.format(x_adv.shape))
-  elif np.amax(x_adv) > 1.0001 or np.amin(x_adv) < -0.0001:
+  elif np.amax(x_adv) > 1.0001 or \
+       np.amin(x_adv) < -0.0001 or \
+       np.isnan(np.amax(x_adv)):
     print('Invalid pixel range. Expected [0, 1], found [{}, {}]'.format(
                                                               np.amin(x_adv),
                                                               np.amax(x_adv)))
