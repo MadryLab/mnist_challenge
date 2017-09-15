@@ -18,6 +18,8 @@ We will maintain a leaderboard of the best attacks for the next two months and t
 
 The goal of our challenge is to clarify the state-of-the-art for adversarial robustness on MNIST. Moreover, we hope that future work on defense mechanisms will adopt a similar challenge format in order to improve reproducibility and empirical comparisons.
 
+**Update 2017-09-14:** Due to recently increased interest in our challenge, we are extending its duration until October 15th.
+
 
 ## Leaderboard
 
@@ -52,7 +54,7 @@ The `sha256()` digest of our model file is:
 ```
 14eea09c72092db5c2eb5e34cd105974f42569281d2f34826316e356d057f96d
 ```
-We will release the corresponding model file on September 15th 2017, which is roughly two months after the start of this competition.
+We will release the corresponding model file on October 15th 2017, which is roughly two months after the start of this competition.
 
 ### The Attack Model
 
