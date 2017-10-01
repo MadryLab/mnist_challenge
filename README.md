@@ -25,10 +25,12 @@ The goal of our challenge is to clarify the state-of-the-art for adversarial rob
 
 | Attack                                 | Submitted by  | Accuracy | Submission Date |
 | -------------------------------------- | ------------- | -------- | ---- |
-| PGD against three independently and<br> adversarially trained copies of the network     | [Florian Tramèr](http://floriantramer.com/)       | **93.54%**   | Jul 5, 2017    |
+| AdvGAN from "Generating Adversarial Examples <br> with Adversarial Networks" (link coming soon)     | AdvGAN       | **92.76%**   | Sep 25, 2017    |
+| PGD against three independently and<br> adversarially trained copies of the network     | [Florian Tramèr](http://floriantramer.com/)       | 93.54%   | Jul 5, 2017    |
 | FGSM on the [CW](https://github.com/carlini/nn_robust_attacks) loss for model B from <br> ["Ensemble Adversarial Training [...]"](https://arxiv.org/abs/1705.07204)     | [Florian Tramèr](http://floriantramer.com/)       | 94.36%   | Jun 29, 2017    |
 | FGSM on the [CW](https://github.com/carlini/nn_robust_attacks) loss for the <br> naturally trained public network      | (initial entry)       | 96.08%   | Jun 28, 2017    |
 | PGD on the cross-entropy loss for the<br> naturally trained public network      | (initial entry)       | 96.81%   | Jun 28, 2017    |
+| Attack using Gaussian Filter for selected pixels<br> on the adversarially trained public network      | Anonymous       | 97.33%   | Aug 27, 2017    |
 | FGSM on the cross-entropy loss for the<br> adversarially trained public network      | (initial entry)       | 97.66%   | Jun 28, 2017    |
 | PGD on the cross-entropy loss for the<br> adversarially trained public network      | (initial entry)       | 97.79%   | Jun 28, 2017    |
 
