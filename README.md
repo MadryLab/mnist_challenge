@@ -25,7 +25,9 @@ running `python fetch_model.py secret`. As of Oct 15th we are no longer
 accepting challenge submissions. We will soon set up a leaderboard to keep track
 of white-box attacks. Many thanks to everyone who participated!
 
-## Leaderboard
+**Update 2017-11-06:** We have set up a leaderboard for white-box attacks on the (now released) secret model. The submission format is the same as before. We plan to continue evaluating submissions and maintaining the leaderboard for the foreseeable future.
+
+## Black-Box Leaderboard (Original Challenge)
 
 | Attack                                 | Submitted by  | Accuracy | Submission Date |
 | -------------------------------------- | ------------- | -------- | ---- |
@@ -38,6 +40,16 @@ of white-box attacks. Many thanks to everyone who participated!
 | FGSM on the cross-entropy loss for the<br> adversarially trained public network      | (initial entry)       | 97.66%   | Jun 28, 2017    |
 | PGD on the cross-entropy loss for the<br> adversarially trained public network      | (initial entry)       | 97.79%   | Jun 28, 2017    |
 
+## White-Box Leaderboard
+
+| Attack                                 | Submitted by  | Accuracy | Submission Date |
+| -------------------------------------- | ------------- | -------- | ---- |
+| 100-step PGD on the cross-entropy loss<br> with 50 random restarts | (initial entry)       | 89.62%   | Nov 6, 2017    |
+| 100-step PGD on the [CW](https://github.com/carlini/nn_robust_attacks) loss<br> with 50 random restarts | (initial entry)       | 89.71%   | Nov 6, 2017    |
+| 100-step PGD on the cross-entropy loss | (initial entry)       | 92.52%   | Nov 6, 2017    |
+| 100-step PGD on the [CW](https://github.com/carlini/nn_robust_attacks) loss | (initial entry)  | 93.04%   | Nov 6, 2017    |
+| FGSM on the cross-entropy loss        | (initial entry)       | 96.36%   | Nov 6, 2017    |
+| FGSM on the [CW](https://github.com/carlini/nn_robust_attacks) loss | (initial entry)       | 96.40%   | Nov 6, 2017    |
 
 ## Format and Rules
 
