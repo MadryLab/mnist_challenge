@@ -21,8 +21,8 @@ The goal of our challenge is to clarify the state-of-the-art for adversarial rob
 **Update 2017-09-14:** Due to recently increased interest in our challenge, we are extending its duration until October 15th.
 
 **Update 2017-10-19:** We released our secret model, you can download it by
-running `python fetch_model.py secret`. As of Oct 15th we are no longer
-accepting challenge submissions. We will soon set up a leaderboard to keep track
+running `python fetch_model.py secret`. As of Oct 15 we are no longer
+accepting black-box challenge submissions. We will soon set up a leaderboard to keep track
 of white-box attacks. Many thanks to everyone who participated!
 
 **Update 2017-11-06:** We have set up a leaderboard for white-box attacks on the (now released) secret model. The submission format is the same as before. We plan to continue evaluating submissions and maintaining the leaderboard for the foreseeable future.
