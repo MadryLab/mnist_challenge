@@ -31,7 +31,7 @@ of white-box attacks. Many thanks to everyone who participated!
 
 | Attack                                 | Submitted by  | Accuracy | Submission Date |
 | -------------------------------------- | ------------- | -------- | ---- |
-| AdvGAN from "Generating Adversarial Examples <br> with Adversarial Networks" (link coming soon)     | AdvGAN       | **92.76%**   | Sep 25, 2017    |
+| AdvGAN from ["Generating Adversarial Examples <br> with Adversarial Networks"](https://arxiv.org/abs/1801.02610)     | AdvGAN       | **92.76%**   | Sep 25, 2017    |
 | PGD against three independently and<br> adversarially trained copies of the network     | [Florian Tramèr](http://floriantramer.com/)       | 93.54%   | Jul 5, 2017    |
 | FGSM on the [CW](https://github.com/carlini/nn_robust_attacks) loss for model B from <br> ["Ensemble Adversarial Training [...]"](https://arxiv.org/abs/1705.07204)     | [Florian Tramèr](http://floriantramer.com/)       | 94.36%   | Jun 29, 2017    |
 | FGSM on the [CW](https://github.com/carlini/nn_robust_attacks) loss for the <br> naturally trained public network      | (initial entry)       | 96.08%   | Jun 28, 2017    |
