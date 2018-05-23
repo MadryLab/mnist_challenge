@@ -44,6 +44,7 @@ of white-box attacks. Many thanks to everyone who participated!
 
 | Attack                                 | Submitted by  | Accuracy | Submission Date |
 | -------------------------------------- | ------------- | -------- | ---- |
+| First-order attack on logit difference<br> for optimally chosen target label | Samarth Gupta       | 88.85%   | May 23, 2018    |
 | 100-step PGD on the cross-entropy loss<br> with 50 random restarts | (initial entry)       | 89.62%   | Nov 6, 2017    |
 | 100-step PGD on the [CW](https://github.com/carlini/nn_robust_attacks) loss<br> with 50 random restarts | (initial entry)       | 89.71%   | Nov 6, 2017    |
 | 100-step PGD on the cross-entropy loss | (initial entry)       | 92.52%   | Nov 6, 2017    |
