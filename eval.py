@@ -18,7 +18,12 @@ import tensorflow as tf
 from tensorflow.examples.tutorials.mnist import input_data
 
 from model import Model
-from pgd_attack import LinfPGDAttack
+from pgd_attack import PGDAttack
+
+import argparse # adding parser for config file
+parser = argparse.ArgumentParser(description='Train an adversarial network according to the specified config file')
+parser.add_argument('-c', '--config', type=str, default='config.json', help='path to the config file to train the adversarial network')
+args = parser.parse_args()
 
 # Global constants
 with open('config.json') as config_file:
@@ -35,20 +40,22 @@ mnist = input_data.read_data_sets('MNIST_data', one_hot=False)
 if eval_on_cpu:
   with tf.device("/cpu:0"):
     model = Model()
-    attack = LinfPGDAttack(model, 
-                           config['epsilon'],
-                           config['k'],
-                           config['a'],
-                           config['random_start'],
-                           config['loss_func'])
+    attack = PGDAttack(model,
+                       config['norm'], 
+                       config['epsilon'],
+                       config['k'],
+                       config['a'],
+                       config['random_start'],
+                       config['loss_func'])
 else:
   model = Model()
-  attack = LinfPGDAttack(model, 
-                         config['epsilon'],
-                         config['k'],
-                         config['a'],
-                         config['random_start'],
-                         config['loss_func'])
+  attack = PGDAttack(model, 
+                     config['norm'],
+                     config['epsilon'],
+                     config['k'],
+                     config['a'],
+                     config['random_start'],
+                     config['loss_func'])
 
 global_step = tf.contrib.framework.get_or_create_global_step()
 

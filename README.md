@@ -27,7 +27,12 @@ of white-box attacks. Many thanks to everyone who participated!
 
 **Update 2017-11-06:** We have set up a leaderboard for white-box attacks on the (now released) secret model. The submission format is the same as before. We plan to continue evaluating submissions and maintaining the leaderboard for the foreseeable future.
 
-## Black-Box Leaderboard (Original Challenge)
+**Update 2018-XX-XX:** Due to recent interest, we have added an L2 option to our white-box challenge with a bound of `epsilon=2.0`. 
+You can download our L2 model by running `python fetch_model.py secret_l2`. 
+To submit an attack, follow the instructions [here](#submitting-an-attack) and email the resulting test set with the subject "L2 Challenge Submission"
+We have set up an additional leaderboard to keep track of the best L2 white-box attacks, which we plan to maintain in addition to the Linf leaderboards for the foreseeable future.
+
+## Linf Black-Box Leaderboard (Original Challenge)
 
 | Attack                                 | Submitted by  | Accuracy | Submission Date |
 | -------------------------------------- | ------------- | -------- | ---- |
@@ -40,11 +45,10 @@ of white-box attacks. Many thanks to everyone who participated!
 | FGSM on the cross-entropy loss for the<br> adversarially trained public network      | (initial entry)       | 97.66%   | Jun 28, 2017    |
 | PGD on the cross-entropy loss for the<br> adversarially trained public network      | (initial entry)       | 97.79%   | Jun 28, 2017    |
 
-## White-Box Leaderboard
+## Linf White-Box Leaderboard
 
 | Attack                                 | Submitted by  | Accuracy | Submission Date |
 | -------------------------------------- | ------------- | -------- | ---- |
-| [Distributionally Adversarial Attack](https://github.com/tianzheng4/Distributionally-Adversarial-Attack) | Tianhang Zheng       | 88.79%   | Aug 13, 2018    |
 | First-order attack on logit difference<br> for optimally chosen target label | Samarth Gupta       | 88.85%   | May 23, 2018    |
 | 100-step PGD on the cross-entropy loss<br> with 50 random restarts | (initial entry)       | 89.62%   | Nov 6, 2017    |
 | 100-step PGD on the [CW](https://github.com/carlini/nn_robust_attacks) loss<br> with 50 random restarts | (initial entry)       | 89.71%   | Nov 6, 2017    |
@@ -52,6 +56,15 @@ of white-box attacks. Many thanks to everyone who participated!
 | 100-step PGD on the [CW](https://github.com/carlini/nn_robust_attacks) loss | (initial entry)  | 93.04%   | Nov 6, 2017    |
 | FGSM on the cross-entropy loss        | (initial entry)       | 96.36%   | Nov 6, 2017    |
 | FGSM on the [CW](https://github.com/carlini/nn_robust_attacks) loss | (initial entry)       | 96.40%   | Nov 6, 2017    |
+
+## L2 White-Box Leaderboard
+
+| Attack                                 | Submitted by  | Accuracy | Submission Date |
+| -------------------------------------- | ------------- | -------- | ---- |
+| 100-step PGD on the cross-entropy loss<br> with 50 random restarts | (initial entry)       | 74.95%   | XXX XX, 2018    |
+| 100-step PGD on the [CW](https://github.com/carlini/nn_robust_attacks) loss<br> with 50 random restarts | (initial entry)       | 75.61%   | XXX XX, 2018    |
+| 100-step PGD on the cross-entropy loss | (initial entry)       | 77.42%   | XXX XX, 2018    |
+| 100-step PGD on the [CW](https://github.com/carlini/nn_robust_attacks) loss | (initial entry)  | 78.08%   | XXX XX, 2018    |
 
 ## Format and Rules
 
@@ -87,13 +100,12 @@ All pixels can be perturbed independently, so this is an l_infinity attack.
 Each attack should consist of a perturbed version of the MNIST test set.
 Each perturbed image in this test set should follow the above attack model. 
 
-The adversarial test set should be formated as a numpy array with one row per example and each row containing a flattened
-array of 28x28 pixels.
-Hence the overall dimensions are 10,000 rows and 784 columns.
-Each pixel must be in the [0,1] range.
-See the script `pgd_attack.py` for an attack that generates an adversarial test set in this format.
+The adversarial test set should be formated as a numpy array with each row containing a flattened array of 28x28 pixels corresponding to a single test example.
+Thus, we expect the overall dimensions of your test set to be 10,000 rows and 784 columns.
+Each pixel must be in the range [0,1].
+See the script `pgd_attack.py` for an example of an attack that generates an adversarial test set in this format.
 
-In order to submit your attack, save the matrix containing your adversarial examples with `numpy.save` and email the resulting file to mnist.challenge@gmail.com. 
+In order to submit your attack, save the matrix containing your adversarial examples with `numpy.save` and email the resulting file to mnist.challenge@gmail.com with the subject line "Linf Challenge Submission". 
 We will then run the `run_attack.py` script on your file to verify that the attack is valid and to evaluate the accuracy of our secret model on your examples.
 After that, we will reply with the predictions of our model on each of your examples and the overall accuracy of our model on your evaluation set.
 
@@ -147,6 +159,7 @@ Evaluation configuration:
 - `eval_on_cpu`: forces the `eval.py` script to run on the CPU so it does not compete with `train.py` for GPU resources.
 
 Adversarial examples configuration:
+- `norm`: the type of PGD attack used by the adversary. Use "inf" for the Linf challenge and "2" for the L2 challenge.
 - `epsilon`: the maximum allowed perturbation per pixel.
 - `k`: the number of PGD iterations used by the adversary.
 - `a`: the size of the PGD adversary steps.

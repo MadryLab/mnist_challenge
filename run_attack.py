@@ -18,6 +18,11 @@ import numpy as np
 
 from model import Model
 
+import argparse # adding parser for config file
+parser = argparse.ArgumentParser(description='Train an adversarial network according to the specified config file')
+parser.add_argument('-c', '--config', type=str, default='config.json', help='path to the config file to train the adversarial network')
+args = parser.parse_args()
+
 def run_attack(checkpoint, x_adv, epsilon):
   mnist = input_data.read_data_sets('MNIST_data', one_hot=False)
 
@@ -71,7 +76,7 @@ def run_attack(checkpoint, x_adv, epsilon):
 if __name__ == '__main__':
   import json
 
-  with open('config.json') as config_file:
+  with open(args.config) as config_file:
     config = json.load(config_file)
 
   model_dir = config['model_dir']

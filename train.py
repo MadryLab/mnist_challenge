@@ -15,9 +15,14 @@ import numpy as np
 from tensorflow.examples.tutorials.mnist import input_data
 
 from model import Model
-from pgd_attack import LinfPGDAttack
+from pgd_attack import PGDAttack
 
-with open('config.json') as config_file:
+import argparse # adding parser for config file
+parser = argparse.ArgumentParser(description='Train an adversarial network according to the specified config file')
+parser.add_argument('-c', '--config', type=str, default='config.json', help='path to the config file to train the adversarial network')
+args = parser.parse_args()
+
+with open(args.config) as config_file:
     config = json.load(config_file)
 
 # Setting up training parameters
@@ -40,12 +45,13 @@ train_step = tf.train.AdamOptimizer(1e-4).minimize(model.xent,
                                                    global_step=global_step)
 
 # Set up adversary
-attack = LinfPGDAttack(model, 
-                       config['epsilon'],
-                       config['k'],
-                       config['a'],
-                       config['random_start'],
-                       config['loss_func'])
+attack = PGDAttack(model,
+                   config['norm'],
+                   config['epsilon'],
+                   config['k'],
+                   config['a'],
+                   config['random_start'],
+                   config['loss_func'])
 
 # Setting up the Tensorboard and checkpoint outputs
 model_dir = config['model_dir']
