@@ -49,6 +49,7 @@ We have set up an additional leaderboard to keep track of the best L2 white-box 
 
 | Attack                                 | Submitted by  | Accuracy | Submission Date |
 | -------------------------------------- | ------------- | -------- | ---- |
+| [Distributionally Adversarial Attack](https://github.com/tianzheng4/Distributionally-Adversarial-Attack) | Tianhang Zheng       | 88.79%   | Aug 13, 2018    |
 | First-order attack on logit difference<br> for optimally chosen target label | Samarth Gupta       | 88.85%   | May 23, 2018    |
 | 100-step PGD on the cross-entropy loss<br> with 50 random restarts | (initial entry)       | 89.62%   | Nov 6, 2017    |
 | 100-step PGD on the [CW](https://github.com/carlini/nn_robust_attacks) loss<br> with 50 random restarts | (initial entry)       | 89.71%   | Nov 6, 2017    |
@@ -131,7 +132,7 @@ The code consists of six Python scripts and the file `config.json` that contains
       the `.npy` file specified in config, while ensuring that the adversarial examples 
       are indeed a valid attack. The script also saves the network predictions in `pred.npy`.
 - `python fetch_model.py name`: downloads the pre-trained model with the
-      specified name (at the moment `adv_trained` or `natural`), prints the sha256
+      specified name (at the moment `adv_trained`, `natural`,  `secret`, or `l2`), prints the sha256
       hash, and places it in the models directory.
 
 ### Parameters in `config.json`
@@ -159,7 +160,7 @@ Evaluation configuration:
 - `eval_on_cpu`: forces the `eval.py` script to run on the CPU so it does not compete with `train.py` for GPU resources.
 
 Adversarial examples configuration:
-- `norm`: the type of PGD attack used by the adversary. Use "inf" for the Linf challenge and "2" for the L2 challenge.
+- `norm`: the type of PGD attack used by the adversary. Use `"inf"` for the Linf challenge and `"2"` for the L2 challenge.
 - `epsilon`: the maximum allowed perturbation per pixel.
 - `k`: the number of PGD iterations used by the adversary.
 - `a`: the size of the PGD adversary steps.
@@ -194,6 +195,11 @@ and use the `config.json` file to set `"model_dir": "models/adv_trained"`.
 python fetch_model.py natural
 ```
 and use the `config.json` file to set `"model_dir": "models/natural"`.
+* For an adversarially trained L2 network, run
+```
+python fetch_model.py l2
+```
+and use the `config.json` file to set `"model_dir": "models/l2_model"`.
 #### Test the network
 * Create an attack file by running
 ```
