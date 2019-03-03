@@ -44,7 +44,8 @@ of white-box attacks. Many thanks to everyone who participated!
 
 | Attack                                 | Submitted by  | Accuracy | Submission Date |
 | -------------------------------------- | ------------- | -------- | ---- |
-| [Distributionally Adversarial Attack](https://github.com/tianzheng4/Distributionally-Adversarial-Attack) <br> merging multiple hyperparameters | Tianhang Zheng       | **88.56%**   | Jan 13, 2019    |
+| [Interval Attacks](https://github.com/tcwangshiqi-columbia/Interval-Attack) | [Shiqi Wang](https://www.cs.columbia.edu/~tcwangshiqi/)       | **88.42%**   | Feb 28, 2019    |
+| [Distributionally Adversarial Attack](https://github.com/tianzheng4/Distributionally-Adversarial-Attack) <br> merging multiple hyperparameters | Tianhang Zheng       | 88.56%   | Jan 13, 2019    |
 | [Interval Attacks](https://github.com/tcwangshiqi-columbia/Interval-Attack) | [Shiqi Wang](https://www.cs.columbia.edu/~tcwangshiqi/)       | 88.59%   | Jan 6, 2019    |
 | [Distributionally Adversarial Attack](https://github.com/tianzheng4/Distributionally-Adversarial-Attack) | Tianhang Zheng       | 88.79%   | Aug 13, 2018    |
 | First-order attack on logit difference<br> for optimally chosen target label | Samarth Gupta       | 88.85%   | May 23, 2018    |
