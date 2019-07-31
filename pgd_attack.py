@@ -31,7 +31,8 @@ class LinfPGDAttack:
                               off_value=0.0,
                               dtype=tf.float32)
       correct_logit = tf.reduce_sum(label_mask * model.pre_softmax, axis=1)
-      wrong_logit = tf.reduce_max((1-label_mask) * model.pre_softmax, axis=1)
+      wrong_logit = tf.reduce_max((1-label_mask) * model.pre_softmax
+                                  - 1e4*label_mask, axis=1)
       loss = -tf.nn.relu(correct_logit - wrong_logit + 50)
     else:
       print('Unknown loss function. Defaulting to cross-entropy')
@@ -44,6 +45,7 @@ class LinfPGDAttack:
        examples within epsilon of x_nat in l_infinity norm."""
     if self.rand:
       x = x_nat + np.random.uniform(-self.epsilon, self.epsilon, x_nat.shape)
+      x = np.clip(x, 0, 1) # ensure valid pixel range
     else:
       x = np.copy(x_nat)
 
