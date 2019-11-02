@@ -45,7 +45,7 @@ of white-box attacks. Many thanks to everyone who participated!
 | Attack                                 | Submitted by  | Accuracy | Submission Date |
 | -------------------------------------- | ------------- | -------- | ---- |
 | First-Order Adversary with Quantized Gradients | Zhuanghua Liu | **88.32%**   | Oct 16, 2019    |
-| MultiTargeted (link coming soon) | Sven Gowal | 88.36%   | Aug 28, 2019    |
+| [MultiTargeted](https://arxiv.org/abs/1910.09338) | Sven Gowal | 88.36%   | Aug 28, 2019    |
 | [Interval Attacks](https://github.com/tcwangshiqi-columbia/Interval-Attack) | [Shiqi Wang](https://www.cs.columbia.edu/~tcwangshiqi/)       | 88.42%   | Feb 28, 2019    |
 | [Distributionally Adversarial Attack](https://github.com/tianzheng4/Distributionally-Adversarial-Attack) <br> merging multiple hyperparameters | Tianhang Zheng       | 88.56%   | Jan 13, 2019    |
 | [Interval Attacks](https://github.com/tcwangshiqi-columbia/Interval-Attack) | [Shiqi Wang](https://www.cs.columbia.edu/~tcwangshiqi/)       | 88.59%   | Jan 6, 2019    |
