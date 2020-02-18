@@ -44,7 +44,8 @@ of white-box attacks. Many thanks to everyone who participated!
 
 | Attack                                 | Submitted by  | Accuracy | Submission Date |
 | -------------------------------------- | ------------- | -------- | ---- |
-| [Square Attack](https://github.com/max-andr/square-attack) | Francesco Croce | **88.25%**   | Jan 14, 2020    |
+| PGD attack with Output Diversified Initialization | Yusuke Tashiro | **88.15%**   | Feb 15, 2020    |
+| [Square Attack](https://github.com/max-andr/square-attack) | Francesco Croce | 88.25%   | Jan 14, 2020    |
 | First-Order Adversary with Quantized Gradients | Zhuanghua Liu | 88.32%   | Oct 16, 2019    |
 | [MultiTargeted](https://arxiv.org/abs/1910.09338) | Sven Gowal | 88.36%   | Aug 28, 2019    |
 | [Interval Attacks](https://github.com/tcwangshiqi-columbia/Interval-Attack) | [Shiqi Wang](https://www.cs.columbia.edu/~tcwangshiqi/)       | 88.42%   | Feb 28, 2019    |
