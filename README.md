@@ -45,7 +45,7 @@ of white-box attacks. Many thanks to everyone who participated!
 | Attack                                 | Submitted by  | Accuracy | Submission Date |
 | -------------------------------------- | ------------- | -------- | ---- |
 | Adaptive [Distributionally Adversarial Attack](https://github.com/tianzheng4/Distributionally-Adversarial-Attack) | Tianhang Zheng       | **88.06%**   | Feb 29, 2019    |
-| PGD attack with Output Diversified Initialization | Yusuke Tashiro | 88.13%   | Feb 15, 2020    |
+| [PGD attack with Output Diversified Initialization](https://arxiv.org/abs/2003.06878) | Yusuke Tashiro | 88.13%   | Feb 15, 2020    |
 | [Square Attack](https://github.com/max-andr/square-attack) | Francesco Croce | 88.25%   | Jan 14, 2020    |
 | First-Order Adversary with Quantized Gradients | Zhuanghua Liu | 88.32%   | Oct 16, 2019    |
 | [MultiTargeted](https://arxiv.org/abs/1910.09338) | Sven Gowal | 88.36%   | Aug 28, 2019    |
