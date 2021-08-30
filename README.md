@@ -44,7 +44,8 @@ of white-box attacks. Many thanks to everyone who participated!
 
 | Attack                                 | Submitted by  | Accuracy | Submission Date |
 | -------------------------------------- | ------------- | -------- | ---- |
-| [PCROS Attack](https://github.com/wan-lab/PCROS) | Chen Wan       | **88.04%**   | Oct 28, 2020    |
+| Guided Local Attack | Siyuan Yi       | **88.00%**   | Aug 30, 2021    |
+| [PCROS Attack](https://github.com/wan-lab/PCROS) | Chen Wan       | 88.04%   | Oct 28, 2020    |
 | Adaptive [Distributionally Adversarial Attack](https://github.com/tianzheng4/Distributionally-Adversarial-Attack) | Tianhang Zheng       | 88.06%   | Feb 29, 2019    |
 | [PGD attack with Output Diversified Initialization](https://arxiv.org/abs/2003.06878) | Yusuke Tashiro | 88.13%   | Feb 15, 2020    |
 | [Square Attack](https://github.com/max-andr/square-attack) | Francesco Croce | 88.25%   | Jan 14, 2020    |
