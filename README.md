@@ -18,6 +18,8 @@ We will maintain a leaderboard of the best attacks for the next two months and t
 
 The goal of our challenge is to clarify the state-of-the-art for adversarial robustness on MNIST. Moreover, we hope that future work on defense mechanisms will adopt a similar challenge format in order to improve reproducibility and empirical comparisons.
 
+**Update 2022-05-03:** We will no longer be accepting submissions to this challenge. 
+
 **Update 2017-09-14:** Due to recently increased interest in our challenge, we are extending its duration until October 15th.
 
 **Update 2017-10-19:** We released our secret model, you can download it by
